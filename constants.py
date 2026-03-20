@@ -75,7 +75,7 @@ COMMANDS_LIST =
   ("claimphoff", "Claim a PH OIL"),
   ("clockspecialoff", "Clock a Special OIL (ie. MWO)"),
   ("claimspecialoff", "Claim a Special OIL (ie. MWO)"),
-  ("newuser", "Import old OIL Records for a brand-new user")
+  ("newuser", "Import old OIL Records for a brand-new user"),
   
   # Admin Commands
   ("startadmin", "Start an Admin PM session"),
