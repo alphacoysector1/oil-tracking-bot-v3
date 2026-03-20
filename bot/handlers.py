@@ -147,7 +147,7 @@ async def cmd_sheetinfo(update, context):
 
 async def cmd_updatecmdlst(update, context):
     await context.bot.set_my_commands(COMMANDS_LIST)
-    await update.message.reply_text("✅ Command list updated.")
+    await update.message.reply_text("✅ Command List updated.")
 
 
 async def cmd_rebuildbalances(update, context):
