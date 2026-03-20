@@ -12,6 +12,7 @@ General
 /ping - quick bot check
 /checksheet - verify Google Sheet connectivity
 /sheetinfo - show connected worksheet title
+/updatecmdlst - Updates the List of Commands
 
 User Commands
 /history - view your recent OIL records
@@ -64,6 +65,7 @@ COMMANDS_LIST = [
   ("ping", "Do a Ping Check"),
   ("checksheet", "Verify Google Sheet connectivity"),
   ("sheetinfo", "Show connected worksheet title"),
+  ("updatecmdlst", "Updates the Commands List"),
   
   # User Commands
   ("history", "View your recent OIL Records"),
