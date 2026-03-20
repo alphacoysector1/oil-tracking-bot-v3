@@ -144,10 +144,9 @@ async def cmd_sheetinfo(update, context):
     else:
         await update.message.reply_text("Sheet not ready.")
 
-
-async def cmd_updatecmdlst(update, context):
+async def cmd_updatecmdlst(update,context):
     await context.bot.set_my_commands(COMMANDS_LIST)
-    await update.message.reply_text("✅ Command List updated.")
+    await update.message.reply_text("✅ Commands List updated.")
 
 
 async def cmd_rebuildbalances(update, context):
