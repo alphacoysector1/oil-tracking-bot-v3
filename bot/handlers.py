@@ -12,7 +12,6 @@ from bot.conversations import (
     cmd_massadjustoff,
     cmd_newuser,
     cmd_startadmin,
-    cmd_updatecmdlst,
     handle_message,
 )
 from constants import HELP_TEXT, START_TEXT, COMMANDS_LIST
