@@ -57,8 +57,7 @@ Current build:
 """
 
 
-COMMANDS_LIST = 
-[
+COMMANDS_LIST = [
   # General Commands
   ("start", "Show Bot Status"),
   ("help", "Show Help Menu"),
