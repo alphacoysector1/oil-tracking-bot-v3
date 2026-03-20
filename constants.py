@@ -55,3 +55,32 @@ Current build:
 - admin tools and overview flow ✅
 - onboarding with FIFO safeguards ✅
 """
+
+
+COMMANDS_LIST = 
+[
+  # General Commands
+  ("start", "Show Bot Status"),
+  ("help", "Show Help Menu"),
+  ("ping", "Do a Ping Check"),
+  ("checksheet", "Verify Google Sheet connectivity"),
+  ("sheetinfo", "Show connected worksheet title"),
+  
+  # User Commands
+  ("history", "View your recent OIL Records"),
+  ("summary", "View your OIL summary"),
+  ("clockoff", "Clock a Normal OIL"),
+  ("claimoff", "Claim a Normal OIL"),
+  ("clockphoff", "Clock a PH OIL"),
+  ("claimphoff", "Claim a PH OIL"),
+  ("clockspecialoff", "Clock a Special OIL (ie. MWO)"),
+  ("claimspecialoff", "Claim a Special OIL (ie. MWO)"),
+  ("newuser", "Import old OIL Records for a brand-new user")
+  
+  # Admin Commands
+  ("startadmin", "Start an Admin PM session"),
+  ("overview", "View Sector OIL Overview"),
+  ("detailedoverview", "View detailed Sector OIL Overview"),
+  ("adjustoil", "Manually adjust a user's OIL"),
+  ("massadjustoff", "Mass adjust OIL for all tracked users")
+]
