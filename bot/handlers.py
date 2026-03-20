@@ -12,6 +12,7 @@ from bot.conversations import (
     cmd_massadjustoff,
     cmd_newuser,
     cmd_startadmin,
+    cmd_updatecmdlst,
     handle_message,
 )
 from constants import HELP_TEXT, START_TEXT
@@ -140,6 +141,35 @@ async def cmd_sheetinfo(update, context):
         await update.message.reply_text(f"Connected sheet: {title}")
     else:
         await update.message.reply_text("Sheet not ready.")
+
+
+async def cmd_updatecmdlst(update, context):
+    await context.bot.set_my_commands([
+        # General Commands
+        ("start", "Show Bot Status"),
+        ("help", "Show Help Menu"),
+        ("ping", "Do a Ping Check"),
+        ("checksheet", "Verify Google Sheet connectivity"),
+        ("sheetinfo", "Show connected worksheet title"),
+
+        # User Commands
+        ("history", "View your recent OIL Records"),
+        ("summary", "View your OIL summary"),
+        ("clockoff", "Clock a Normal OIL"),
+        ("claimoff", "Claim a Normal OIL"),
+        ("clockphoff", "Clock a PH OIL"),
+        ("claimphoff", "Claim a PH OIL"),
+        ("clockspecialoff", "Clock a Special OIL (ie. MWO)"),
+        ("claimspecialoff", "Claim a Special OIL (ie. MWO)"),
+        ("newuser", "Import old OIL Records for a brand-new user")
+
+        # Admin Commands
+        ("startadmin", "Start an Admin PM session"),
+        ("overview", "View Sector OIL Overview"),
+        ("detailedoverview", "View detailed Sector OIL Overview"),
+        ("adjustoil", "Manually adjust a user's OIL"),
+        ("massadjustoff", "Mass adjust OIL for all tracked users")
+    ])
 
 
 async def cmd_rebuildbalances(update, context):
@@ -402,6 +432,7 @@ def register_handlers(application):
     application.add_handler(CommandHandler("ping", cmd_ping))
     application.add_handler(CommandHandler("checksheet", cmd_checksheet))
     application.add_handler(CommandHandler("sheetinfo", cmd_sheetinfo))
+    application.add_handler(CommandHandler("updatecmdlist", cmd_updatecmdlst))
     application.add_handler(CommandHandler("rebuildbalances", cmd_rebuildbalances))
     application.add_handler(CommandHandler("cleanupexpired", cmd_cleanupexpired))
 
