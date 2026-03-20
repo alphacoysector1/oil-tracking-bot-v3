@@ -24,8 +24,6 @@ from services.ledger import (
 )
 from services.sheets_repo import get_all_rows, healthcheck, try_get_worksheet_title
 
-await context.bot.set_my_commands(COMMANDS_LIST)
-
 
 SEPARATOR = "────────────────────"
 
@@ -143,6 +141,7 @@ async def cmd_sheetinfo(update, context):
         await update.message.reply_text(f"Connected sheet: {title}")
     else:
         await update.message.reply_text("Sheet not ready.")
+
 
 async def cmd_updatecmdlst(update,context):
     await context.bot.set_my_commands(COMMANDS_LIST)
